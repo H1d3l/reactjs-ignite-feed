@@ -1,14 +1,19 @@
-import './App.css'
-import { Header } from './components/Header/Header'
+import { Header } from "./components/Header/Header";
+import styles from "./App.module.css";
 
-import './global.css';
+import "./global.css";
+import { Sidebar } from "./components/Sidebar/Sidebar";
 
 function App() {
-  
-
   return (
-    <Header></Header>
-  )
+    <div>
+      <Header></Header>
+      <div className={styles.wrapper}>
+        <Sidebar></Sidebar>
+        <main></main>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
